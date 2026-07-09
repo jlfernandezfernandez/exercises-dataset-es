@@ -11,7 +11,7 @@
   <img src="videos/0334-DsgkuIt.gif" width="120" alt="dumbbell lateral raise" />
 </p>
 
-**A comprehensive, ready-to-use fitness exercise dataset with 1,324 exercises — each with an animation GIF, 180×180 thumbnail image, category, body-part, equipment, target and muscle-group data, and step-by-step instructions in 9 languages (English, Spanish, Italian, Turkish, Russian, Chinese, Hindi, Polish, Korean).**
+**A ready-to-use bilingual fitness exercise dataset with 1,324 exercises — each with English and Spanish names, step-by-step instructions in both languages, animation GIFs, 180×180 thumbnails, and body-part, equipment, target and muscle-group data.**
 
 [![Exercises](https://img.shields.io/badge/Exercises-1324-blue?style=flat-square)](data/exercises.json)
 [![Animation GIFs](https://img.shields.io/badge/Animation%20GIFs-1324-brightgreen?style=flat-square)](videos/)
@@ -32,7 +32,7 @@
 
 - 1,324 exercises with category, body-part, equipment, target and muscle-group data
 - an animation GIF + 180×180 thumbnail for every exercise (media © [Gym visual](https://gymvisual.com/) — see [License](#-license--use))
-- step-by-step instructions in 9 languages (🇬🇧 English, 🇪🇸 Spanish, 🇮🇹 Italian, 🇹🇷 Turkish, 🇷🇺 Russian, 🇨🇳 Chinese, 🇮🇳 Hindi, 🇵🇱 Polish, 🇰🇷 Korean)
+- English and Spanish names and step-by-step instructions
 - the interactive browser (`index.html`) and developer setup guide (`setup.html`)
 
 ---
@@ -65,13 +65,13 @@ Each exercise entry contains:
 | Field | Description |
 |---|---|
 | Unique ID | Numeric identifier (e.g. `"0001"`) |
-| Name | Full descriptive exercise name |
+| Names | `name_en` and `name_es`; `name` aliases the Spanish display name |
 | Category | Primary muscle group targeted |
 | Target | Specific target muscle |
 | Muscle Group | Supporting / synergist muscles |
 | Equipment | Equipment required (or `body weight` for bodyweight) |
 | Instructions | Step-by-step instructions for each exercise |
-| Available Languages | 🇬🇧 English · 🇪🇸 Spanish · 🇮🇹 Italian · 🇹🇷 Turkish · 🇷🇺 Russian · 🇨🇳 Chinese · 🇮🇳 Hindi · 🇵🇱 Polish · 🇰🇷 Korean |
+| Available Languages | 🇬🇧 English · 🇪🇸 Spanish |
 | Media | 180×180 thumbnail (`image`) + animation GIF (`gif_url`) per exercise — media © Gym visual, see [License](#-license--use) |
 
 ---
