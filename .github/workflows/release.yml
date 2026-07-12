@@ -1,0 +1,22 @@
+name: Release dataset
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test release builder
+        run: python -m unittest discover -s tests -v
+      - name: Build release assets
+        run: python scripts/build_release.py --version "$GITHUB_REF_NAME"
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/manifest.json dist/exercise-dataset.tar.gz --generate-notes --verify-tag
